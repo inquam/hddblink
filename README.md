@@ -1,5 +1,8 @@
 # hddblink
-A small shell script used to make the activity led of a drive blink so you can identify it in a chassi with multiple drive bays. The script requires smartmontools
+A small shell script used to make the activity led of a drive blink so you can identify it in a chassi with multiple drive bays.
+My use case was a 24-bay server chassi where I got an error reported on a drive and wanted to quickly locate which drive in the chassi it was so I could replace it.
+
+_The script requires smartmontools_
 
 ## Installation
 

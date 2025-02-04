@@ -1,0 +1,2 @@
+#!/bin/sh
+while true; do sudo smartctl -a $1 > /dev/null 2>&1; echo -n "."; sleep 1; done

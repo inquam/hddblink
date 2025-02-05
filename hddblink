@@ -1,2 +1,13 @@
 #!/bin/sh
-while true; do sudo smartctl -a $1 > /dev/null 2>&1; echo -n "."; sleep 1; done
+
+# Ensure the script is run as root.
+if [ "$(id -u)" -ne 0 ]; then
+    echo "This script must be run as root. Please re-run as root."
+    exit 1
+fi
+
+while true; do
+    smartctl -a "$1" > /dev/null 2>&1
+    echo -n "."
+    sleep 1
+done
